@@ -1,0 +1,6 @@
+# Your own settings and logo stay on your computer
+wallball_web/secrets.h
+wallball_web/logo.h
+
+.DS_Store
+*.swp
