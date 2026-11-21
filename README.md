@@ -173,6 +173,18 @@ BOM.md                 parts list with prices
 
 Work in progress: built and tuned for one target in a gym, six more are planned. Thresholds depend on the target and the mounting, so expect to calibrate once. Issues and ideas are welcome.
 
+## Next steps
+
+Planned for the next build (details in [issue #1](https://github.com/sbstn84/Arduino-Wall-Ball-Counter/issues/1)):
+
+- **Zone detection on/off** (toggle in the settings header). The target board is very stiff, so both sensors feel every impact and "only the active sensor counts" does not separate top from bottom reliably.
+  - **Off:** every impact above the threshold counts, no zone selection, the whole target is green on the main screen.
+  - **On:** the peaks of both sensors are compared. The sensor of the selected zone must be at least a set factor stronger (**zone ratio 1.0–3.0 ×**). An impact in the wrong zone is a **No Rep**, as in HYROX.
+- **Separate values per zone** when zone detection is on: noise limit and hit threshold for the top zone (Sensor O) and the bottom zone (Sensor U).
+- **Graph and list:** mark the peaks of both sensors, show the ratio of the last impact and add it to the last-5 list ("O 4.2 g / U 2.1 g, 2.0 ×", result Rep / No Rep / wrong zone).
+- Collect real throws per zone to find a good default for the ratio.
+- Longer term: more robust hardware for several targets, other sensing options (decoupled sensor areas, pressure film, proximity sensors).
+
 ## License
 
 [MIT](LICENSE)
