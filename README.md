@@ -172,3 +172,7 @@ BOM.md                 parts list with prices
 ## Status
 
 Work in progress: built and tuned for one target in a gym, six more are planned. Thresholds depend on the target and the mounting, so expect to calibrate once. Issues and ideas are welcome.
+
+## License
+
+[MIT](LICENSE)
